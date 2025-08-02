@@ -1,0 +1,444 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+/* 共通 */
+
+:root{
+     --font-Baskerville: 'Libre Baskerville', serif;
+     --font-family-Kaku: "Zen Kaku Gothic New", sans-serif;
+     --color-orange-btn-grad: linear-gradient(90deg,#f06e46, #f09646 35%, #fcfa65, #73ed68);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    font-size: 100%; /* 16px */
+    color: #fff;
+}
+
+img{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* body */
+body{
+    background-color: hsl(249, 12%, 33%);
+}
+/* header */
+header{
+    font-family: var(--font-Baskerville);
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    padding-bottom: 27px;
+    align-items: center;
+}
+/* footer */
+.footer{
+    font-family: var(--font-Baskerville);
+    text-align: center;
+    padding: 20px 0;
+    color: #fff;
+    font-size: 1rem;
+}
+/* メインロゴ */
+.logo{
+    width: 200px;
+}
+/* ナビゲーション */
+.main_nav{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.1rem;
+}
+
+.main_nav li{
+    color: #fff;
+    margin: 0 40px;
+}
+
+.main_nav a{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.main_nav a::after{
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 1.5px;
+    background: #fff;
+    transform: scale(0, 1);
+    transform-origin: right top;
+    transition: transform 0.5s;
+}
+
+.main_nav a:hover::after{
+    transform: scale(1, 1);
+}
+
+/* div TITLE */
+/* タイトル */
+.title{
+    font-family: var(--font-Baskerville);
+    max-width: 100%;
+    font-size: 6rem;
+    text-align: center;
+    color: hsl(225, 68%, 82%);
+    opacity: 0.2;
+   
+}
+/* content */
+
+/* 画像たちの大枠 */
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    width: calc(100% - 20%);
+    height: calc(100vh - 20%);
+    padding: 40px;
+    padding-top: 15px;
+    margin: 0 auto;
+}
+
+/* 画像アイテム */
+.child{
+    position: relative;
+    width: 250px;
+    height: 220px;
+}
+  
+.pic{
+    width: 250px;
+    height: 220px;
+    object-fit: cover;
+    filter: grayscale(20%);
+ }
+ 
+
+ /* 画像ホバー時挙動記述 */
+.hover-mask{
+    width: 250px;
+    height: 220px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    color: #fff;
+    opacity: 0;
+}
+ .hover-mask:hover{
+    opacity: 1;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+ }
+ .hover-mask p{
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 90px;
+ }
+
+ /* 遷移先ありホバー時 */
+ .active:hover img{
+    transform: scale(1.08);
+    transition: transform 0.3s ease;
+ }
+
+ /* Work01(HTML CSS) */
+ .container02{
+    /* display: flex; */
+    margin: 0 auto;
+    margin-top: 100px;
+ }
+ .big_box{
+    display: flex;
+    flex-direction: column;
+    width: 1300px;
+    gap: 10px;
+    margin: 0 auto;
+ }
+ .im_box{
+    display: flex;
+    height: 600px;
+    /* background-color: rgb(159, 225, 149); */
+}
+.im_left{
+    display: block;
+    width: 35%;
+    height: 320px;
+    margin: 30px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: inset 0 0 1rem  rgba(176, 255, 160, 0.7);
+    overflow: hidden;
+}
+.visuals_01{
+    display: block;
+    margin: 0 auto;
+    padding: 30px 0;
+    height: 250px;
+    object-fit: cover;
+}
+.visuals_01_horyu{
+    font-size: 2rem;
+    text-align: center;
+    height: 250px;
+    line-height: 250px;
+}
+.cm_name{
+    padding: 10px;
+    width: 250px;
+    height: 80px;
+    line-height: 22px;
+    border-radius: 0 10px 0 0;
+    box-shadow: 0 0 1rem rgba(176, 255, 160, 0.7);
+    background-color: hsl(249, 12%, 33%);
+}
+.arrow_icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: var(--color-orange-btn-grad);
+    position: absolute;
+    bottom: 20px;
+    left: 350px;
+ }
+.arrow_icon img{
+    display: block;
+    width: 30%;
+    height: 30%;
+}
+.im_left:hover .arrow_icon{
+     transform: scale(1.4);
+     transition: transform 0.6s ease;
+}
+.im_right{
+    width: 65%;
+    margin-left: 20px;
+}
+ h2{
+    font-size: 1.2rem;
+    height: 60px;
+    line-height: 60px;
+    font-weight: 500;
+ }
+.main_table{
+    font-size: 0.85rem;
+    border-collapse: collapse;
+    /* line-height: 40px; */
+}
+.main_table th{
+    text-align: center;
+    vertical-align: middle;
+}
+.main_table td{
+    padding: 10px 0;
+}
+.main_table tr{
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    height: 40px;
+}
+.border_00{
+    border-left: 1px solid rgb(255, 255, 255);
+    display: block;
+    line-height: 20px;
+}
+.border_01{
+    border-left: 1px solid rgb(255, 255, 255);
+    display: block;
+    line-height: 20px;
+    padding-left: 20px;
+}
+.item{
+    width: 130px;
+}
+.item_plus{
+    width: 70px;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 500;
+    /* background-color: blue; */
+}
+.border_02{
+    margin: 0 auto;
+    height: 1px;
+    width: 1000px;
+    background-color: #6973d3;
+    margin-bottom: 50px;
+}
+
+ /* スマホ */
+ @media screen and (max-width: 414px){
+    /* header */
+    header{
+        flex-direction: column;
+        height: auto;
+        line-height: 60px;
+    }
+    .main_nav{
+        font-size: 0.8rem;
+    }
+    .main_nav li{
+    margin: 0 20px;
+    }
+
+    /* Title */
+    .title{
+        font-size: 5rem;
+    }
+
+    /* Content */
+    .container{
+        padding-top: 30px;
+    }
+
+    /* Work01(HTML CSS) */
+    .container02{
+        margin: 5px 0 50px 0;
+        height: auto;
+        min-height: unset;
+        align-items: stretch;
+    }
+    .big_box{
+        width: 400px;
+        height: auto;
+        gap: 60px;
+        margin: 0 auto;
+    }
+    .im_box{
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        /* background-color: rgb(159, 225, 149); */
+    }
+    .im_left{
+        display: block;
+        width: 100%;
+        height: 240px;
+        margin: 30px;
+        margin-bottom: 10px;
+        position: relative;
+        border-radius: 10px;
+        box-shadow: inset 0 0 1rem  rgba(176, 255, 160, 0.7);
+        overflow: hidden;
+    }
+    .visuals_01{
+        display: block;
+        margin: 0 auto;
+        padding: 30px 0;
+        height: 180px;
+        object-fit: cover;
+    }
+    .visuals_01_horyu{
+        font-size: 1.5rem;
+        text-align: center;
+        height: 180px;
+        line-height: 180px;
+    }
+    .cm_name{
+        font-size: 0.8rem;
+        padding: 10px;
+        width: 230px;
+        height: 80px;
+        line-height: 22px;
+        border-radius: 0 10px 0 0;
+        box-shadow: 0 0 1rem rgba(176, 255, 160, 0.7);
+        background-color: hsl(249, 12%, 33%);
+    }
+    .arrow_icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-image: var(--color-orange-btn-grad);
+        position: absolute;
+        bottom: 20px;
+        left: 258px;
+    }
+    .arrow_icon img{
+        display: block;
+        width: 30%;
+        height: 30%;
+    }
+    .im_left:hover .arrow_icon{
+        transform: scale(1.4);
+        transition: transform 0.6s ease;
+    }
+    .im_right{
+        width: 100%;
+        margin: 0 20px 0 20px;
+    }
+    h2{
+        margin: 20px 0 10px 0;
+        font-size: 1.1rem;
+        height: 22px;
+        line-height: 22px;
+        font-weight: 500;
+    }
+    .h2_height{
+        margin-bottom: 32px;
+    }
+    .main_table{
+        font-size: 0.7rem;
+        border-collapse: collapse;
+    }
+    .main_table th{
+        text-align: center;
+        vertical-align: middle;
+    }
+    .main_table td{
+        padding: 10px 0;
+    }
+    .main_table tr{
+        border-top: 1px solid #ffffff;
+        border-bottom: 1px solid #ffffff;
+        height: 40px;
+    }
+    .border_00{
+        border-left: 1px solid rgb(255, 255, 255);
+        display: block;
+        line-height: 20px;
+    }
+    .border_01{
+        border-left: 1px solid rgb(255, 255, 255);
+        display: block;
+        line-height: 20px;
+        padding-left: 10px;
+    }
+    .item{
+        font-size: 0.7rem;
+        width: 60px;
+    }
+    .item_plus{
+        width: 40px;
+        height: 100%;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 0.7rem;
+        font-weight: 500;
+        /* background-color: blue; */
+    }
+
+ }
+
+ 
+
+
+
+

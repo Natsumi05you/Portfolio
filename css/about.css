@@ -1,0 +1,310 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Zen+Kaku+Gothic+New&display=swap');
+
+/* 共通 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    font-size: 100%;  /* 16px */
+    font-family: 'Libre Baskerville', 'Zen Kaku Gothic New', serif;
+}
+
+img{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* トップ画面　*/
+body{
+    background-color: #f15922;
+}
+/* header */
+header{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    padding-bottom: 27px;
+    align-items: center;
+}
+/* footer */
+.footer{
+    font-family: var(--font-Baskerville);
+    text-align: center;
+    padding: 20px 0;
+    color: #fff;
+    font-size: 1rem;
+}
+/* メインロゴ */
+.logo{
+    width: 200px;
+}
+/* ナビゲーション */
+.main_nav{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.1rem;
+}
+
+li{
+    color: #fff;
+    margin: 0 40px;
+}
+
+.main_nav a{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.main_nav a::after{
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 1.5px;
+    background: #fff;
+    transform: scale(0, 1);
+    transform-origin: right top;
+    transition: transform 0.5s;
+}
+
+.main_nav a:hover::after{
+    transform: scale(1, 1);
+}
+
+
+/* ABOUT */
+.title{
+    max-width: 100%;
+    font-size: 6rem;
+    text-align: center;
+    opacity: 0.3;
+    padding-bottom: 60px;
+}
+
+/* コンテンツ　Profile */
+.profile{
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 40%);
+    height: 500px;
+    margin: 0 auto;
+}
+
+.subtitle{
+    width: 15%;
+    height: 500px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: rgba(241, 193, 34,1);
+}
+
+.text{
+    color: #fff;
+    font-size: 2.5rem;
+    writing-mode: vertical-rl;
+    text-align: right;
+}
+
+.bunsyo{
+    display: flex;
+    flex-flow: column;
+    padding: 55px;
+    padding-top: 5px;
+    width: 55%;
+}
+
+h2{
+    font-size: 1.3rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+p{
+    line-height: 2em;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+span{
+    margin-bottom:20px;
+    display:inline-block;
+}
+
+.mepic{
+    width: 30%;
+    height: 500px;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+/* 罫線 */
+.line{
+    border-top: 1px solid #fff;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 110px;
+}
+
+/* コンテンツ Skill Set */
+.skillset{
+    display: flex;
+    align-items: flex-end;
+    width: calc(100% - 40%);
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/* アプリケーション画像 */
+.icon{
+    width: 95px;
+    height: auto;
+}
+
+/* アプリ情報文章 */
+.text-wrap{
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+h3{
+    font-size: 3rem;
+    color: #fff;
+}
+
+/* 各アプリ情報の箱 */
+.item{
+    width: 210px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    /* background-color: #66a174; */
+}
+
+/* アプリ達の箱 */
+.container{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 0 auto;
+}
+/* スマホ */
+@media screen and (max-width: 414px){
+    /* header */
+    header{
+        flex-direction: column;
+        height: auto;
+        line-height: 60px;
+    }
+    .main_nav{
+        font-size: 0.8rem;
+    }
+    .main_nav li{
+    margin: 0 20px;
+    }
+    /* Title */
+    .title{
+        font-size: 5rem;
+        padding-bottom: 30px;
+    }
+
+    /* content */
+    /* コンテンツ SPlofile */
+    .profile{
+        width: calc(100% - 15%);
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    /* タイトルPlofile */
+    .subtitle{
+        width: 98%;
+        height: 45px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0;
+        padding-top: 4px;
+        margin-top: 10px;
+    }
+    .text{
+        font-size: 2rem;
+        writing-mode: horizontal-tb;
+        text-align: center;
+    }
+    /* 名前+内容 */
+    .bunsyo{
+        width: 100%;
+        padding: 0;
+        margin-top: 10px;
+    }
+    h2{
+        margin-top: 17px;
+    }
+    p{
+        font-size: 0.95rem;
+    }
+    .mepic{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        opacity: 0.8;
+        margin-top: 20px;
+    }
+
+    /* 罫線 */
+    .line{
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 90px;
+    }
+    /* コンテンツ Skill Set */
+    .skillset{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: calc(100% - 15%);
+        height: auto;
+    }
+    /* アプリケーション画像 */
+    .icon{
+        width: 95px;
+        height: auto;
+        margin: 0;
+    }
+    /* 各アプリ情報の箱 */
+    .item{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 0px;
+    }
+    /* アプリ達の箱 */
+    .container{
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+    }
+}
+/* スマホ2 */
+@media screen and (max-width: 475px){
+    p{
+        font-size: 0.9rem;
+    }
+}
