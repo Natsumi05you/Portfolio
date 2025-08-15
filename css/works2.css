@@ -174,7 +174,7 @@ header{
 .im_left{
     display: block;
     width: 35%;
-    height: 320px;
+    height: 370px;
     margin: 30px;
     position: relative;
     border-radius: 10px;
@@ -184,20 +184,20 @@ header{
 .visuals_01{
     display: block;
     margin: 0 auto;
-    padding: 30px 0;
-    height: 250px;
+    padding: 40px 0;
+    height: 280px;
     object-fit: cover;
 }
 .visuals_01_horyu{
     font-size: 2rem;
     text-align: center;
-    height: 250px;
+    height: 280px;
     line-height: 250px;
 }
 .cm_name{
     padding: 10px;
-    width: 250px;
-    height: 80px;
+    width: 300px;
+    height: 90px;
     line-height: 22px;
     border-radius: 0 10px 0 0;
     box-shadow: 0 0 1rem rgba(176, 255, 160, 0.7);
